@@ -15,6 +15,7 @@ exports.handler = function(event, context, callback) {
   // 从event中拿到上传文件的bucket和key
   const bucket = event.Records[0].s3.bucket.name; 
   const key = event.Records[0].s3.object.key; 
+  const dest_key = "small/" + key.split("/").pop();
 
   S3.getObject({Bucket: bucket, Key: key}).promise()
     // 制作缩略图
@@ -28,7 +29,7 @@ exports.handler = function(event, context, callback) {
         Body: buffer,
         Bucket: bucket,
         ContentType: 'image/png',
-        Key: "small/" + key,
+        Key: dest_key,
       }).promise()
     )
 }

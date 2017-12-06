@@ -29,7 +29,7 @@
                             "arn": "arn:aws:s3:::mybucket"
                         },
                         "object": {
-                            "key": "63a005db4ed15799254cf49681b6e7e4c733.png",
+                            "key": "raw/63a005db4ed15799254cf49681b6e7e4c733.png",
                             "size": 1024,
                             "eTag": "d41d8cd98f00b204e9800998ecf8427e",
                             "versionId": "096fKKXTRTtl3on89fVO.nfljtsv6qko",
